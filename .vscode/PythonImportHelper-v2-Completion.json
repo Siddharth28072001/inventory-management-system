@@ -1316,56 +1316,11 @@
         "documentation": {}
     },
     {
-        "label": "DB_HOST",
-        "kind": 5,
-        "importPath": "backend.app.database",
-        "description": "backend.app.database",
-        "peekOfCode": "DB_HOST = os.getenv(\"DB_HOST\")\nDB_PORT = os.getenv(\"DB_PORT\")\nDB_NAME = os.getenv(\"DB_NAME\")\nDB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine",
-        "detail": "backend.app.database",
-        "documentation": {}
-    },
-    {
-        "label": "DB_PORT",
-        "kind": 5,
-        "importPath": "backend.app.database",
-        "description": "backend.app.database",
-        "peekOfCode": "DB_PORT = os.getenv(\"DB_PORT\")\nDB_NAME = os.getenv(\"DB_NAME\")\nDB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)",
-        "detail": "backend.app.database",
-        "documentation": {}
-    },
-    {
-        "label": "DB_NAME",
-        "kind": 5,
-        "importPath": "backend.app.database",
-        "description": "backend.app.database",
-        "peekOfCode": "DB_NAME = os.getenv(\"DB_NAME\")\nDB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session",
-        "detail": "backend.app.database",
-        "documentation": {}
-    },
-    {
-        "label": "DB_USER",
-        "kind": 5,
-        "importPath": "backend.app.database",
-        "description": "backend.app.database",
-        "peekOfCode": "DB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(",
-        "detail": "backend.app.database",
-        "documentation": {}
-    },
-    {
-        "label": "DB_PASSWORD",
-        "kind": 5,
-        "importPath": "backend.app.database",
-        "description": "backend.app.database",
-        "peekOfCode": "DB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(\n    autocommit=False,",
-        "detail": "backend.app.database",
-        "documentation": {}
-    },
-    {
         "label": "DATABASE_URL",
         "kind": 5,
         "importPath": "backend.app.database",
         "description": "backend.app.database",
-        "peekOfCode": "DATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,",
+        "peekOfCode": "DATABASE_URL = os.getenv(\"DATABASE_URL\")\nengine = create_engine(DATABASE_URL)\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\nBase = declarative_base()\ndef get_db():\n    db = SessionLocal()",
         "detail": "backend.app.database",
         "documentation": {}
     },
@@ -1374,7 +1329,7 @@
         "kind": 5,
         "importPath": "backend.app.database",
         "description": "backend.app.database",
-        "peekOfCode": "engine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\n# Base class for all models\nBase = declarative_base()\n# Dependency for database sessions",
+        "peekOfCode": "engine = create_engine(DATABASE_URL)\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\nBase = declarative_base()\ndef get_db():\n    db = SessionLocal()\n    try:",
         "detail": "backend.app.database",
         "documentation": {}
     },
@@ -1383,7 +1338,7 @@
         "kind": 5,
         "importPath": "backend.app.database",
         "description": "backend.app.database",
-        "peekOfCode": "SessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\n# Base class for all models\nBase = declarative_base()\n# Dependency for database sessions\ndef get_db():\n    db = SessionLocal()",
+        "peekOfCode": "SessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\nBase = declarative_base()\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db",
         "detail": "backend.app.database",
         "documentation": {}
     },
@@ -1392,7 +1347,7 @@
         "kind": 5,
         "importPath": "backend.app.database",
         "description": "backend.app.database",
-        "peekOfCode": "Base = declarative_base()\n# Dependency for database sessions\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "peekOfCode": "Base = declarative_base()\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
         "detail": "backend.app.database",
         "documentation": {}
     },
