@@ -1383,7 +1383,7 @@
         "kind": 5,
         "importPath": "backend.app.main",
         "description": "backend.app.main",
-        "peekOfCode": "app = FastAPI(\n    title=\"Inventory Management API\",\n    version=\"1.0.0\"\n)\n# ✅ ADD THIS HERE (IMPORTANT)\norigins = [\n    \"http://localhost:3000\",\n    \"http://localhost:5173\"\n]\napp.add_middleware(",
+        "peekOfCode": "app = FastAPI(\n    title=\"Inventory Management API\",\n    version=\"1.0.0\"\n)\n# ✅ ADD THIS HERE (IMPORTANT)\norigins = [\n    \"http://localhost:3000\",\n    \"http://localhost:5173\",\n    \"https://inventory-frontend-iota-ashen.vercel.app/\"\n]",
         "detail": "backend.app.main",
         "documentation": {}
     },
@@ -1392,7 +1392,7 @@
         "kind": 5,
         "importPath": "backend.app.main",
         "description": "backend.app.main",
-        "peekOfCode": "origins = [\n    \"http://localhost:3000\",\n    \"http://localhost:5173\"\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],",
+        "peekOfCode": "origins = [\n    \"http://localhost:3000\",\n    \"http://localhost:5173\",\n    \"https://inventory-frontend-iota-ashen.vercel.app/\"\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],",
         "detail": "backend.app.main",
         "documentation": {}
     },
