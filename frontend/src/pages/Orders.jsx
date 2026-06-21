@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import api from "../api/axios";
 import { getOrders, deleteOrder } from "../services/orderService";
 import OrderForm from "../components/OrderForm";
@@ -10,7 +10,8 @@ export default function Orders() {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
-  const [loading, setLoading] = useState(null);
+
+  const [loading, setLoading] = useState(false);
 
   // ================= PAGINATION =================
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,29 +19,28 @@ export default function Orders() {
 
   // ================= FETCH =================
   const fetchOrders = async () => {
+    setLoading(true);
     try {
-      setLoading(true);
       const [orderRes, customerRes] = await Promise.all([
         getOrders(),
         api.get("/customers"),
       ]);
 
       // Orders
-      if (orderRes.status) {
-        setOrders(orderRes.data);
+      if (orderRes?.status) {
+        setOrders(orderRes.data || []);
       } else {
-        toast.error(orderRes.message);
+        toast.error(orderRes?.message || "Failed to fetch orders");
       }
 
-      // Customers
-      if (customerRes.data.status) {
-        setCustomers(customerRes.data.data);
-      } else {
-        setCustomers(customerRes.data.data || customerRes.data);
-      }
-      setLoading(false);
+      // Customers (safer handling)
+      const customerData = customerRes?.data?.data || customerRes?.data || [];
+
+      setCustomers(Array.isArray(customerData) ? customerData : []);
     } catch (err) {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong while fetching data");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -50,39 +50,58 @@ export default function Orders() {
 
   // ================= DELETE =================
   const handleDelete = async (id) => {
+    setLoading(true);
     try {
-      setLoading(true);
       const res = await deleteOrder(id);
 
-      if (res.status) {
-        toast.success(res.message);
+      if (res?.status) {
+        toast.success(res.message || "Order deleted");
         fetchOrders();
       } else {
-        toast.error(res.message);
+        toast.error(res?.message || "Delete failed");
       }
-      setLoading(false);
     } catch (err) {
       toast.error("Delete failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   // ================= HELPERS =================
   const getCustomerName = (id) => {
-    const customer = customers.find((c) => c.id === id);
-    return customer ? customer.full_name : "Unknown";
+    return customers.find((c) => c.id === id)?.full_name || "Unknown";
   };
 
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
 
-    const day = String(d.getDate()).padStart(2, "0");
-    const month = String(d.getMonth() + 1).padStart(2, "0");
-    const year = d.getFullYear();
+    return `${String(d.getDate()).padStart(2, "0")}-${String(
+      d.getMonth() + 1,
+    ).padStart(2, "0")}-${d.getFullYear()} ${String(d.getHours()).padStart(
+      2,
+      "0",
+    )}:${String(d.getMinutes()).padStart(2, "0")}`;
+  };
 
-    const hours = String(d.getHours()).padStart(2, "0");
-    const minutes = String(d.getMinutes()).padStart(2, "0");
+  // ================= PAGINATION =================
+  const totalPages = useMemo(
+    () => Math.ceil(orders.length / pageSize),
+    [orders.length],
+  );
 
-    return `${day}-${month}-${year} ${hours}:${minutes}`;
+  const paginatedOrders = useMemo(() => {
+    const start = (currentPage - 1) * pageSize;
+    return orders.slice(start, start + pageSize);
+  }, [orders, currentPage]);
+
+  const goToPage = (page) => setCurrentPage(page);
+
+  const nextPage = () => {
+    if (currentPage < totalPages) setCurrentPage((p) => p + 1);
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) setCurrentPage((p) => p - 1);
   };
 
   // ================= MODALS =================
@@ -91,26 +110,6 @@ export default function Orders() {
 
   const openView = (order) => setSelectedOrder(order);
   const closeView = () => setSelectedOrder(null);
-
-  // ================= PAGINATION =================
-  const totalPages = Math.ceil(orders.length / pageSize);
-
-  const startIndex = (currentPage - 1) * pageSize;
-
-  const paginatedOrders = orders.slice(
-    startIndex,
-    startIndex + pageSize
-  );
-
-  const goToPage = (page) => setCurrentPage(page);
-
-  const nextPage = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-  };
-
-  const prevPage = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
 
   return (
     <div>
@@ -125,51 +124,69 @@ export default function Orders() {
 
       {/* TABLE */}
       <div style={styles.tableBox}>
-        <table style={styles.table}>
-          <thead>
-            <tr>
-              <th style={styles.th}>#</th>
-              <th style={styles.th}>Customer</th>
-              <th style={styles.th}>Total Amount</th>
-              <th style={styles.th}>Date</th>
-              <th style={styles.th}>Action</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {paginatedOrders.map((o, index) => (
-              <tr key={o.id}>
-                <td style={styles.td}>{startIndex + index + 1}</td>
-
-                <td style={styles.td}>
-                  {getCustomerName(o.customer_id)}
-                </td>
-
-                <td style={styles.td}>₹{o.total_amount}</td>
-
-                <td style={styles.td}>
-                  {formatDate(o.created_at)}
-                </td>
-
-                <td style={styles.td}>
-                  <button
-                    style={styles.viewBtn}
-                    onClick={() => openView(o)}
-                  >
-                    View
-                  </button>
-
-                  <button
-                    style={styles.deleteBtn}
-                    onClick={() => handleDelete(o.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>#</th>
+                <th style={styles.th}>Customer</th>
+                <th style={styles.th}>Total Amount</th>
+                <th style={styles.th}>Date</th>
+                <th style={styles.th}>Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody>
+              {paginatedOrders.length > 0 ? (
+                paginatedOrders.map((o, index) => (
+                  <tr key={o.id}>
+                    <td style={styles.td}>
+                      {(currentPage - 1) * pageSize + index + 1}
+                    </td>
+
+                    <td style={styles.td}>{getCustomerName(o.customer_id)}</td>
+
+                    <td style={styles.td}>₹{o.total_amount}</td>
+
+                    <td style={styles.td}>{formatDate(o.created_at)}</td>
+
+                    <td style={styles.td}>
+                      <button
+                        style={styles.viewBtn}
+                        onClick={() => openView(o)}
+                      >
+                        View
+                      </button>
+
+                      <button
+                        style={styles.deleteBtn}
+                        onClick={() => handleDelete(o.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td
+                    colSpan="5"
+                    style={{
+                      ...styles.td,
+                      textAlign: "center",
+                      fontWeight: "600",
+                      padding: "20px",
+                    }}
+                  >
+                    No Data Found
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        )}
 
         {/* PAGINATION */}
         <div style={styles.pagination}>
@@ -183,8 +200,7 @@ export default function Orders() {
               onClick={() => goToPage(i + 1)}
               style={{
                 ...styles.pageBtn,
-                background:
-                  currentPage === i + 1 ? "#2563eb" : "#f3f4f6",
+                background: currentPage === i + 1 ? "#2563eb" : "#f3f4f6",
                 color: currentPage === i + 1 ? "white" : "black",
               }}
             >
@@ -198,13 +214,12 @@ export default function Orders() {
         </div>
       </div>
 
-      {/* ================= CREATE ORDER MODAL ================= */}
+      {/* CREATE ORDER MODAL */}
       {showModal && (
         <div style={styles.overlay} onClick={closeModal}>
           <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
             <div style={styles.modalHeader}>
-              <h3 style={{ margin: 0 }}>Place Order</h3>
-
+              <h3>Place Order</h3>
               <button style={styles.closeBtn} onClick={closeModal}>
                 ✕
               </button>
@@ -221,35 +236,32 @@ export default function Orders() {
         </div>
       )}
 
-      {/* ================= VIEW ORDER MODAL ================= */}
+      {/* VIEW ORDER MODAL */}
       {selectedOrder && (
         <div style={styles.overlay} onClick={closeView}>
           <div style={styles.modalLarge} onClick={(e) => e.stopPropagation()}>
             <div style={styles.modalHeader}>
-              <h3 style={{ margin: 0 }}>Order Invoice</h3>
-
+              <h3>Order Invoice</h3>
               <button style={styles.closeBtn} onClick={closeView}>
                 ✕
               </button>
             </div>
 
-            {/* ORDER INFO */}
             <div style={{ fontSize: "14px", marginBottom: "10px" }}>
               <p>
-                <b>Customer:</b>{" "}
-                {getCustomerName(selectedOrder.customer_id)}
+                <b>Customer:</b> {getCustomerName(selectedOrder.customer_id)}
               </p>
-              <p><b>Order ID:</b> {selectedOrder.id}</p>
+              <p>
+                <b>Order ID:</b> {selectedOrder.id}
+              </p>
               <p>
                 <b>Date:</b> {formatDate(selectedOrder.created_at)}
               </p>
-
               <p>
                 <b>Total:</b> ₹{selectedOrder.total_amount}
               </p>
             </div>
 
-            {/* ITEMS TABLE */}
             <table style={styles.table}>
               <thead>
                 <tr>
@@ -266,13 +278,8 @@ export default function Orders() {
                     <td style={styles.td}>
                       {item.product?.name || item.product_id}
                     </td>
-
                     <td style={styles.td}>{item.quantity}</td>
-
-                    <td style={styles.td}>
-                      ₹{item.price_at_purchase}
-                    </td>
-
+                    <td style={styles.td}>₹{item.price_at_purchase}</td>
                     <td style={styles.td}>
                       ₹{item.quantity * item.price_at_purchase}
                     </td>
@@ -295,7 +302,6 @@ const styles = {
     alignItems: "center",
     marginBottom: "15px",
   },
-
   addBtn: {
     background: "#2563eb",
     color: "white",
@@ -305,7 +311,6 @@ const styles = {
     cursor: "pointer",
     fontWeight: "600",
   },
-
   tableBox: {
     background: "white",
     padding: "10px",
@@ -313,13 +318,11 @@ const styles = {
     boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
     overflowX: "auto",
   },
-
   table: {
     width: "100%",
     borderCollapse: "collapse",
     fontSize: "14px",
   },
-
   th: {
     border: "1px solid #e5e7eb",
     padding: "10px",
@@ -327,12 +330,10 @@ const styles = {
     textAlign: "left",
     fontWeight: "600",
   },
-
   td: {
     border: "1px solid #e5e7eb",
     padding: "10px",
   },
-
   viewBtn: {
     background: "#3b82f6",
     color: "white",
@@ -342,7 +343,6 @@ const styles = {
     cursor: "pointer",
     marginRight: "8px",
   },
-
   deleteBtn: {
     background: "#ef4444",
     color: "white",
@@ -351,14 +351,12 @@ const styles = {
     borderRadius: "5px",
     cursor: "pointer",
   },
-
   pagination: {
     display: "flex",
     justifyContent: "center",
     gap: "6px",
     marginTop: "15px",
   },
-
   pageBtn: {
     padding: "6px 10px",
     border: "1px solid #2a518b",
@@ -366,7 +364,6 @@ const styles = {
     cursor: "pointer",
     borderRadius: "5px",
   },
-
   overlay: {
     position: "fixed",
     top: 0,
@@ -378,14 +375,12 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   },
-
   modal: {
     background: "white",
     padding: "20px",
     borderRadius: "12px",
     width: "500px",
   },
-
   modalLarge: {
     background: "white",
     padding: "20px",
@@ -394,7 +389,6 @@ const styles = {
     maxHeight: "80vh",
     overflowY: "auto",
   },
-
   modalHeader: {
     display: "flex",
     justifyContent: "space-between",
@@ -402,7 +396,6 @@ const styles = {
     marginBottom: "10px",
     paddingBottom: "8px",
   },
-
   closeBtn: {
     border: "none",
     background: "#f3f4f6",

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { getCustomers, deleteCustomer } from "../services/customerService";
 import CustomerForm from "../components/CustomerForm";
 import { toast } from "react-toastify";
+import Loader from "../components/Loader";
 
 export default function Customers() {
   const [customers, setCustomers] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [editCustomer, setEditCustomer] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // ================= PAGINATION STATE =================
+  // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
 
@@ -17,16 +17,18 @@ export default function Customers() {
   const fetchCustomers = async () => {
     try {
       setLoading(true);
+
       const res = await getCustomers();
 
       if (res.status) {
-        setCustomers(res.data);
+        setCustomers(res.data || []);
       } else {
-        toast.error(res.message);
+        toast.error(res.message || "Failed to fetch customers");
       }
-      setLoading(false);
-    } catch (err) {
+    } catch (error) {
       toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -36,39 +38,32 @@ export default function Customers() {
 
   // ================= DELETE =================
   const handleDelete = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this customer?"))
+      return;
+
     try {
       setLoading(true);
+
       const res = await deleteCustomer(id);
 
       if (res.status) {
-        toast.success(res.message);
-        fetchCustomers();
+        toast.success(res.message || "Deleted successfully");
+        await fetchCustomers();
       } else {
-        toast.error(res.message);
+        toast.error(res.message || "Delete failed");
       }
-      setLoading(false);
-    } catch (err) {
+    } catch (error) {
       toast.error("Delete failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   // ================= MODAL =================
-  const openAddModal = () => {
-    setEditCustomer(null);
-    setShowModal(true);
-  };
+  const openAddModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
-  const openEditModal = (customer) => {
-    setEditCustomer(customer);
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-    setEditCustomer(null);
-  };
-
-  // ================= PAGINATION LOGIC =================
+  // ================= PAGINATION =================
   const totalPages = Math.ceil(customers.length / pageSize);
 
   const startIndex = (currentPage - 1) * pageSize;
@@ -78,17 +73,18 @@ export default function Customers() {
     startIndex + pageSize
   );
 
-  const goToPage = (page) => {
-    setCurrentPage(page);
-  };
+  const goToPage = (page) => setCurrentPage(page);
 
   const nextPage = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+    if (currentPage < totalPages) setCurrentPage((p) => p + 1);
   };
 
   const prevPage = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
+    if (currentPage > 1) setCurrentPage((p) => p - 1);
   };
+
+  // Loader
+  if (loading) return <Loader />;
 
   return (
     <div>
@@ -115,60 +111,64 @@ export default function Customers() {
           </thead>
 
           <tbody>
-            {paginatedCustomers.map((c, index) => (
-              <tr key={c.id} style={styles.tr}>
-                <td style={styles.td}>{startIndex + index + 1}</td>
+            {paginatedCustomers.length > 0 ? (
+              paginatedCustomers.map((c, index) => (
+                <tr key={c.id}>
+                  <td style={styles.td}>
+                    {startIndex + index + 1}
+                  </td>
 
-                <td style={styles.td}>{c.full_name}</td>
-                <td style={styles.td}>{c.email}</td>
-                <td style={styles.td}>{c.phone_number}</td>
+                  <td style={styles.td}>{c.full_name}</td>
+                  <td style={styles.td}>{c.email}</td>
+                  <td style={styles.td}>{c.phone_number}</td>
 
-                <td style={styles.td}>
-                  <button
-                    style={styles.editBtn}
-                    onClick={() => openEditModal(c)}
-                  >
-                    Edit
-                  </button>
-
-                  <button
-                    style={styles.deleteBtn}
-                    onClick={() => handleDelete(c.id)}
-                  >
-                    Delete
-                  </button>
+                  <td style={styles.td}>
+                    <button
+                      style={styles.deleteBtn}
+                      onClick={() => handleDelete(c.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5" style={styles.td}>
+                  No Data Found
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
 
-        {/* ================= PAGINATION ================= */}
-        <div style={styles.pagination}>
-          <button onClick={prevPage} style={styles.pageBtn}>
-            Prev
-          </button>
-
-          {[...Array(totalPages)].map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goToPage(i + 1)}
-              style={{
-                ...styles.pageBtn,
-                background:
-                  currentPage === i + 1 ? "#2563eb" : "#f3f4f6",
-                color:
-                  currentPage === i + 1 ? "white" : "black",
-              }}
-            >
-              {i + 1}
+        {/* PAGINATION */}
+        {customers.length > 0 && (
+          <div style={styles.pagination}>
+            <button onClick={prevPage} style={styles.pageBtn}>
+              Prev
             </button>
-          ))}
 
-          <button onClick={nextPage} style={styles.pageBtn}>
-            Next
-          </button>
-        </div>
+            {[...Array(totalPages)].map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToPage(i + 1)}
+                style={{
+                  ...styles.pageBtn,
+                  background:
+                    currentPage === i + 1 ? "#2563eb" : "#f3f4f6",
+                  color: currentPage === i + 1 ? "white" : "black",
+                }}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            <button onClick={nextPage} style={styles.pageBtn}>
+              Next
+            </button>
+          </div>
+        )}
       </div>
 
       {/* MODAL */}
@@ -176,9 +176,7 @@ export default function Customers() {
         <div style={styles.overlay} onClick={closeModal}>
           <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
             <div style={styles.modalHeader}>
-              <h3 style={{ margin: 0 }}>
-                {editCustomer ? "Edit Customer" : "Add Customer"}
-              </h3>
+              <h3>Add Customer</h3>
 
               <button style={styles.closeBtn} onClick={closeModal}>
                 ✕
@@ -186,7 +184,6 @@ export default function Customers() {
             </div>
 
             <CustomerForm
-              editCustomer={editCustomer}
               onSuccess={(res) => {
                 if (res.status) {
                   toast.success(res.message);
@@ -212,7 +209,6 @@ const styles = {
     alignItems: "center",
     marginBottom: "15px",
   },
-
   addBtn: {
     background: "#2563eb",
     color: "white",
@@ -222,7 +218,6 @@ const styles = {
     cursor: "pointer",
     fontWeight: "600",
   },
-
   tableBox: {
     background: "white",
     padding: "10px",
@@ -230,13 +225,11 @@ const styles = {
     boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
     overflowX: "auto",
   },
-
   table: {
     width: "100%",
     borderCollapse: "collapse",
     fontSize: "14px",
   },
-
   th: {
     border: "1px solid #e5e7eb",
     padding: "10px",
@@ -244,28 +237,11 @@ const styles = {
     background: "#f9fafb",
     fontWeight: "600",
   },
-
   td: {
     border: "1px solid #e5e7eb",
     padding: "10px",
     textAlign: "left",
-    verticalAlign: "middle",
   },
-
-  tr: {
-    transition: "0.2s",
-  },
-
-  editBtn: {
-    background: "#f59e0b",
-    color: "white",
-    border: "none",
-    padding: "5px 10px",
-    marginRight: "8px",
-    borderRadius: "5px",
-    cursor: "pointer",
-  },
-
   deleteBtn: {
     background: "#ef4444",
     color: "white",
@@ -274,24 +250,19 @@ const styles = {
     borderRadius: "5px",
     cursor: "pointer",
   },
-
   pagination: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
     gap: "6px",
     marginTop: "15px",
   },
-
   pageBtn: {
     padding: "6px 10px",
     border: "1px solid #2a518b",
     background: "#010918",
     cursor: "pointer",
     borderRadius: "5px",
-    fontSize: "13px",
   },
-
   overlay: {
     position: "fixed",
     top: 0,
@@ -303,24 +274,19 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   },
-
   modal: {
     background: "white",
     padding: "20px",
     borderRadius: "12px",
     width: "420px",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
   },
-
   modalHeader: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
     marginBottom: "12px",
     borderBottom: "1px solid #eee",
     paddingBottom: "8px",
   },
-
   closeBtn: {
     border: "none",
     background: "#f3f4f6",
@@ -328,7 +294,6 @@ const styles = {
     height: "28px",
     borderRadius: "6px",
     cursor: "pointer",
-    fontSize: "14px",
     fontWeight: "bold",
   },
 };

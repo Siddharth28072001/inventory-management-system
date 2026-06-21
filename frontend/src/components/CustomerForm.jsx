@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { createCustomer, updateCustomer } from "../services/customerService";
+import { useState } from "react";
+import { createCustomer } from "../services/customerService";
 import { toast } from "react-toastify";
-export default function CustomerForm({ editCustomer, onSuccess }) {
+
+export default function CustomerForm({ onSuccess }) {
   const [form, setForm] = useState({
     full_name: "",
     email: "",
@@ -9,17 +10,6 @@ export default function CustomerForm({ editCustomer, onSuccess }) {
   });
 
   const [loading, setLoading] = useState(false);
-
-  // ================= LOAD EDIT DATA =================
-  useEffect(() => {
-    if (editCustomer) {
-      setForm({
-        full_name: editCustomer.full_name || "",
-        email: editCustomer.email || "",
-        phone_number: editCustomer.phone_number || "",
-      });
-    }
-  }, [editCustomer]);
 
   // ================= HANDLE INPUT =================
   const handleChange = (e) => {
@@ -29,30 +19,21 @@ export default function CustomerForm({ editCustomer, onSuccess }) {
   // ================= SUBMIT =================
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.full_name) {
-      toast.warn("Name cannot be empty!");
-      return;
-    }
-    if (!form.email) {
-      toast.warn("Email cannot be empty!");
-      return;
-    }
-    if (!form.phone_number) {
-      toast.warn("Phone Number cannot be empty!");
-      return;
-    }
+
+    if (!form.full_name) return toast.warn("Name cannot be empty!");
+    if (!form.email) return toast.warn("Email cannot be empty!");
+    if (!form.phone_number) return toast.warn("Phone Number cannot be empty!");
+
     setLoading(true);
 
-    let res;
-
-    if (editCustomer) {
-      res = await updateCustomer(editCustomer.id, form);
-    } else {
-      res = await createCustomer(form);
+    try {
+      const res = await createCustomer(form);
+      onSuccess(res);
+    } catch (err) {
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
-    onSuccess(res);
   };
 
   return (
@@ -86,30 +67,14 @@ export default function CustomerForm({ editCustomer, onSuccess }) {
 
       {/* BUTTON */}
       <button type="submit" style={styles.btn} disabled={loading}>
-        {loading
-          ? "Saving..."
-          : editCustomer
-            ? "Update Customer"
-            : "Create Customer"}
+        {loading ? "Saving..." : "Create Customer"}
       </button>
     </form>
   );
 }
 
+/* ================= STYLES ================= */
 const styles = {
-  title: {
-    marginBottom: "12px",
-    fontSize: "16px",
-    fontWeight: "600",
-    textAlign: "center",
-  },
-
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-  },
-
   input: {
     padding: "8px 10px",
     borderRadius: "6px",
@@ -117,23 +82,10 @@ const styles = {
     fontSize: "13px",
     width: "95%",
     outline: "none",
+    marginBottom: "10px",
   },
 
-  row: {
-    display: "flex",
-    gap: "10px",
-  },
-
-  smallInput: {
-    flex: 1,
-    padding: "8px 10px",
-    borderRadius: "6px",
-    border: "1px solid #ddd",
-    fontSize: "13px",
-    outline: "none",
-  },
-
-  button: {
+  btn: {
     padding: "8px 10px",
     background: "#2563eb",
     color: "white",
@@ -143,6 +95,5 @@ const styles = {
     fontSize: "13px",
     fontWeight: "600",
     width: "140px",
-    alignSelf: "center",
   },
 };

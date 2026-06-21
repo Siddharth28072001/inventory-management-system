@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/axios";
+import Loader from "../components/Loader";
 
 export default function Dashboard() {
   const [stats, setStats] = useState({
@@ -8,7 +9,8 @@ export default function Dashboard() {
     orders: 0,
     lowStock: 0,
   });
-  const [loading, setLoading] = useState(null);
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchStats();
@@ -17,6 +19,7 @@ export default function Dashboard() {
   const fetchStats = async () => {
     try {
       setLoading(true);
+
       const res = await api.get("/inventory/dashboard");
 
       const data = res?.data?.data || {
@@ -32,19 +35,26 @@ export default function Dashboard() {
         orders: data.orders ?? 0,
         lowStock: data.low_stock ?? 0,
       });
-      setLoading(false);
-    } catch (err) {
-      console.error(err);
 
-      // fallback to 0 on error
+    } catch (err) {
+      console.error("Dashboard fetch error:", err);
+
       setStats({
         products: 0,
         customers: 0,
         orders: 0,
         lowStock: 0,
       });
+
+    } finally {
+      setLoading(false);
     }
   };
+
+  // Loader
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div>
@@ -81,6 +91,7 @@ const styles = {
     gridTemplateColumns: "repeat(2, 1fr)",
     gap: "15px",
   },
+
   card: {
     background: "white",
     padding: "20px",
