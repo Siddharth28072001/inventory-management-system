@@ -1,0 +1,1480 @@
+[
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Numeric",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerCreate",
+        "importPath": "app.schemas.customer",
+        "description": "app.schemas.customer",
+        "isExtraImport": true,
+        "detail": "app.schemas.customer",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerCreate",
+        "importPath": "app.schemas.customer",
+        "description": "app.schemas.customer",
+        "isExtraImport": true,
+        "detail": "app.schemas.customer",
+        "documentation": {}
+    },
+    {
+        "label": "customer_service",
+        "importPath": "app.services",
+        "description": "app.services",
+        "isExtraImport": true,
+        "detail": "app.services",
+        "documentation": {}
+    },
+    {
+        "label": "order_service",
+        "importPath": "app.services",
+        "description": "app.services",
+        "isExtraImport": true,
+        "detail": "app.services",
+        "documentation": {}
+    },
+    {
+        "label": "product_service",
+        "importPath": "app.services",
+        "description": "app.services",
+        "isExtraImport": true,
+        "detail": "app.services",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "app.models.product",
+        "description": "app.models.product",
+        "isExtraImport": true,
+        "detail": "app.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "app.models.product",
+        "description": "app.models.product",
+        "isExtraImport": true,
+        "detail": "app.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "app.models.product",
+        "description": "app.models.product",
+        "isExtraImport": true,
+        "detail": "app.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "app.models.order",
+        "description": "app.models.order",
+        "isExtraImport": true,
+        "detail": "app.models.order",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "app.models.order",
+        "description": "app.models.order",
+        "isExtraImport": true,
+        "detail": "app.models.order",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "app.models.customer",
+        "description": "app.models.customer",
+        "isExtraImport": true,
+        "detail": "app.models.customer",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "app.models.customer",
+        "description": "app.models.customer",
+        "isExtraImport": true,
+        "detail": "app.models.customer",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "app.models.customer",
+        "description": "app.models.customer",
+        "isExtraImport": true,
+        "detail": "app.models.customer",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "error_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "error_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "error_response",
+        "importPath": "app.utils.api_response",
+        "description": "app.utils.api_response",
+        "isExtraImport": true,
+        "detail": "app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "OrderCreate",
+        "importPath": "app.schemas.order",
+        "description": "app.schemas.order",
+        "isExtraImport": true,
+        "detail": "app.schemas.order",
+        "documentation": {}
+    },
+    {
+        "label": "OrderCreate",
+        "importPath": "app.schemas.order",
+        "description": "app.schemas.order",
+        "isExtraImport": true,
+        "detail": "app.schemas.order",
+        "documentation": {}
+    },
+    {
+        "label": "ProductCreate",
+        "importPath": "app.schemas.product",
+        "description": "app.schemas.product",
+        "isExtraImport": true,
+        "detail": "app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductUpdate",
+        "importPath": "app.schemas.product",
+        "description": "app.schemas.product",
+        "isExtraImport": true,
+        "detail": "app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductCreate",
+        "importPath": "app.schemas.product",
+        "description": "app.schemas.product",
+        "isExtraImport": true,
+        "detail": "app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductUpdate",
+        "importPath": "app.schemas.product",
+        "description": "app.schemas.product",
+        "isExtraImport": true,
+        "detail": "app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "app.models.order_item",
+        "description": "app.models.order_item",
+        "isExtraImport": true,
+        "detail": "app.models.order_item",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "app.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "app.models",
+        "description": "app.models",
+        "detail": "app.models",
+        "documentation": {}
+    },
+    {
+        "label": "product",
+        "importPath": "app.routers",
+        "description": "app.routers",
+        "isExtraImport": true,
+        "detail": "app.routers",
+        "documentation": {}
+    },
+    {
+        "label": "customer",
+        "importPath": "app.routers",
+        "description": "app.routers",
+        "isExtraImport": true,
+        "detail": "app.routers",
+        "documentation": {}
+    },
+    {
+        "label": "order",
+        "importPath": "app.routers",
+        "description": "app.routers",
+        "isExtraImport": true,
+        "detail": "app.routers",
+        "documentation": {}
+    },
+    {
+        "label": "inventory",
+        "importPath": "app.routers",
+        "description": "app.routers",
+        "isExtraImport": true,
+        "detail": "app.routers",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "kind": 6,
+        "importPath": "backend.app.models.customer",
+        "description": "backend.app.models.customer",
+        "peekOfCode": "class Customer(Base):\n    __tablename__ = \"customers\"\n    id = Column(\n        Integer,\n        primary_key=True,\n        index=True\n    )\n    full_name = Column(\n        String,\n        nullable=False",
+        "detail": "backend.app.models.customer",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "kind": 6,
+        "importPath": "backend.app.models.order",
+        "description": "backend.app.models.order",
+        "peekOfCode": "class Order(Base):\n    __tablename__ = \"orders\"\n    id = Column(\n        Integer,\n        primary_key=True,\n        index=True\n    )\n    customer_id = Column(\n        Integer,\n        ForeignKey(\"customers.id\"),",
+        "detail": "backend.app.models.order",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "kind": 6,
+        "importPath": "backend.app.models.order_item",
+        "description": "backend.app.models.order_item",
+        "peekOfCode": "class OrderItem(Base):\n    __tablename__ = \"order_items\"\n    id = Column(\n        Integer,\n        primary_key=True,\n        index=True\n    )\n    order_id = Column(\n        Integer,\n        ForeignKey(\"orders.id\"),",
+        "detail": "backend.app.models.order_item",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "backend.app.models.product",
+        "description": "backend.app.models.product",
+        "peekOfCode": "class Product(Base):\n    __tablename__ = \"products\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String(255), nullable=False)\n    sku = Column(String(100), unique=True, nullable=False)\n    price = Column(Numeric(10, 2), nullable=False)\n    quantity = Column(Integer, nullable=False, default=0)\n    created_at = Column(\n        DateTime(timezone=True),\n        server_default=func.now()",
+        "detail": "backend.app.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "create_customer",
+        "kind": 2,
+        "importPath": "backend.app.routers.customer",
+        "description": "backend.app.routers.customer",
+        "peekOfCode": "def create_customer(\n    customer: CustomerCreate,\n    db: Session = Depends(get_db)\n):\n    return customer_service.create_customer(db, customer)\n# GET ALL CUSTOMERS\n@router.get(\"/\")\ndef get_customers(\n    db: Session = Depends(get_db)\n):",
+        "detail": "backend.app.routers.customer",
+        "documentation": {}
+    },
+    {
+        "label": "get_customers",
+        "kind": 2,
+        "importPath": "backend.app.routers.customer",
+        "description": "backend.app.routers.customer",
+        "peekOfCode": "def get_customers(\n    db: Session = Depends(get_db)\n):\n    return customer_service.get_customers(db)\n# GET CUSTOMER BY ID\n@router.get(\"/{id}\")\ndef get_customer(\n    id: int,\n    db: Session = Depends(get_db)\n):",
+        "detail": "backend.app.routers.customer",
+        "documentation": {}
+    },
+    {
+        "label": "get_customer",
+        "kind": 2,
+        "importPath": "backend.app.routers.customer",
+        "description": "backend.app.routers.customer",
+        "peekOfCode": "def get_customer(\n    id: int,\n    db: Session = Depends(get_db)\n):\n    return customer_service.get_customer(db, id)\n# DELETE CUSTOMER\n@router.delete(\"/{id}\")\ndef delete_customer(\n    id: int,\n    db: Session = Depends(get_db)",
+        "detail": "backend.app.routers.customer",
+        "documentation": {}
+    },
+    {
+        "label": "delete_customer",
+        "kind": 2,
+        "importPath": "backend.app.routers.customer",
+        "description": "backend.app.routers.customer",
+        "peekOfCode": "def delete_customer(\n    id: int,\n    db: Session = Depends(get_db)\n):\n    return customer_service.delete_customer(db, id)",
+        "detail": "backend.app.routers.customer",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.app.routers.customer",
+        "description": "backend.app.routers.customer",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/customers\",\n    tags=[\"Customers\"]\n)\n# CREATE CUSTOMER\n@router.post(\"/\")\ndef create_customer(\n    customer: CustomerCreate,\n    db: Session = Depends(get_db)\n):",
+        "detail": "backend.app.routers.customer",
+        "documentation": {}
+    },
+    {
+        "label": "get_dashboard_data",
+        "kind": 2,
+        "importPath": "backend.app.routers.inventory",
+        "description": "backend.app.routers.inventory",
+        "peekOfCode": "def get_dashboard_data(db: Session = Depends(get_db)):\n    products_count = db.query(func.count(Product.id)).scalar()\n    orders_count = db.query(func.count(Order.id)).scalar()\n    customers_count = db.query(func.count(Customer.id)).scalar()\n    low_stock_count = (\n        db.query(func.count(Product.id))\n        .filter(Product.quantity <= 5)\n        .scalar()\n    )\n    return success_response(",
+        "detail": "backend.app.routers.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.app.routers.inventory",
+        "description": "backend.app.routers.inventory",
+        "peekOfCode": "router = APIRouter(prefix=\"/inventory\", tags=[\"Inventory\"])\n@router.get(\"/dashboard\")\ndef get_dashboard_data(db: Session = Depends(get_db)):\n    products_count = db.query(func.count(Product.id)).scalar()\n    orders_count = db.query(func.count(Order.id)).scalar()\n    customers_count = db.query(func.count(Customer.id)).scalar()\n    low_stock_count = (\n        db.query(func.count(Product.id))\n        .filter(Product.quantity <= 5)\n        .scalar()",
+        "detail": "backend.app.routers.inventory",
+        "documentation": {}
+    },
+    {
+        "label": "create_order",
+        "kind": 2,
+        "importPath": "backend.app.routers.order",
+        "description": "backend.app.routers.order",
+        "peekOfCode": "def create_order(order: OrderCreate, db: Session = Depends(get_db)):\n    return order_service.create_order(db, order)\n# GET ALL ORDERS\n@router.get(\"/\")\ndef get_orders(db: Session = Depends(get_db)):\n    return order_service.get_orders(db)\n# GET ORDER BY ID\n@router.get(\"/{id}\")\ndef get_order(id: int, db: Session = Depends(get_db)):\n    return order_service.get_order(db, id)",
+        "detail": "backend.app.routers.order",
+        "documentation": {}
+    },
+    {
+        "label": "get_orders",
+        "kind": 2,
+        "importPath": "backend.app.routers.order",
+        "description": "backend.app.routers.order",
+        "peekOfCode": "def get_orders(db: Session = Depends(get_db)):\n    return order_service.get_orders(db)\n# GET ORDER BY ID\n@router.get(\"/{id}\")\ndef get_order(id: int, db: Session = Depends(get_db)):\n    return order_service.get_order(db, id)\n@router.delete(\"/{id}\")\ndef delete_order(id: int, db: Session = Depends(get_db)):\n    return order_service.delete_order(db, id)",
+        "detail": "backend.app.routers.order",
+        "documentation": {}
+    },
+    {
+        "label": "get_order",
+        "kind": 2,
+        "importPath": "backend.app.routers.order",
+        "description": "backend.app.routers.order",
+        "peekOfCode": "def get_order(id: int, db: Session = Depends(get_db)):\n    return order_service.get_order(db, id)\n@router.delete(\"/{id}\")\ndef delete_order(id: int, db: Session = Depends(get_db)):\n    return order_service.delete_order(db, id)",
+        "detail": "backend.app.routers.order",
+        "documentation": {}
+    },
+    {
+        "label": "delete_order",
+        "kind": 2,
+        "importPath": "backend.app.routers.order",
+        "description": "backend.app.routers.order",
+        "peekOfCode": "def delete_order(id: int, db: Session = Depends(get_db)):\n    return order_service.delete_order(db, id)",
+        "detail": "backend.app.routers.order",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.app.routers.order",
+        "description": "backend.app.routers.order",
+        "peekOfCode": "router = APIRouter(prefix=\"/orders\", tags=[\"Orders\"])\n# CREATE ORDER\n@router.post(\"/\")\ndef create_order(order: OrderCreate, db: Session = Depends(get_db)):\n    return order_service.create_order(db, order)\n# GET ALL ORDERS\n@router.get(\"/\")\ndef get_orders(db: Session = Depends(get_db)):\n    return order_service.get_orders(db)\n# GET ORDER BY ID",
+        "detail": "backend.app.routers.order",
+        "documentation": {}
+    },
+    {
+        "label": "create_product",
+        "kind": 2,
+        "importPath": "backend.app.routers.product",
+        "description": "backend.app.routers.product",
+        "peekOfCode": "def create_product(product: ProductCreate, db: Session = Depends(get_db)):\n    return product_service.create_product(db, product)\n@router.get(\"/\")\ndef get_products(db: Session = Depends(get_db)):\n    return product_service.get_products(db)\n@router.get(\"/{id}\")\ndef get_product(id: int, db: Session = Depends(get_db)):\n    return product_service.get_product(db, id)\n@router.put(\"/{id}\")\ndef update_product(id: int, product_update: ProductUpdate, db: Session = Depends(get_db)):",
+        "detail": "backend.app.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_products",
+        "kind": 2,
+        "importPath": "backend.app.routers.product",
+        "description": "backend.app.routers.product",
+        "peekOfCode": "def get_products(db: Session = Depends(get_db)):\n    return product_service.get_products(db)\n@router.get(\"/{id}\")\ndef get_product(id: int, db: Session = Depends(get_db)):\n    return product_service.get_product(db, id)\n@router.put(\"/{id}\")\ndef update_product(id: int, product_update: ProductUpdate, db: Session = Depends(get_db)):\n    return product_service.update_product(db, id, product_update)\n@router.delete(\"/{id}\")\ndef delete_product(id: int, db: Session = Depends(get_db)):",
+        "detail": "backend.app.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "get_product",
+        "kind": 2,
+        "importPath": "backend.app.routers.product",
+        "description": "backend.app.routers.product",
+        "peekOfCode": "def get_product(id: int, db: Session = Depends(get_db)):\n    return product_service.get_product(db, id)\n@router.put(\"/{id}\")\ndef update_product(id: int, product_update: ProductUpdate, db: Session = Depends(get_db)):\n    return product_service.update_product(db, id, product_update)\n@router.delete(\"/{id}\")\ndef delete_product(id: int, db: Session = Depends(get_db)):\n    return product_service.delete_product(db, id)",
+        "detail": "backend.app.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "update_product",
+        "kind": 2,
+        "importPath": "backend.app.routers.product",
+        "description": "backend.app.routers.product",
+        "peekOfCode": "def update_product(id: int, product_update: ProductUpdate, db: Session = Depends(get_db)):\n    return product_service.update_product(db, id, product_update)\n@router.delete(\"/{id}\")\ndef delete_product(id: int, db: Session = Depends(get_db)):\n    return product_service.delete_product(db, id)",
+        "detail": "backend.app.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "delete_product",
+        "kind": 2,
+        "importPath": "backend.app.routers.product",
+        "description": "backend.app.routers.product",
+        "peekOfCode": "def delete_product(id: int, db: Session = Depends(get_db)):\n    return product_service.delete_product(db, id)",
+        "detail": "backend.app.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.app.routers.product",
+        "description": "backend.app.routers.product",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/products\",\n    tags=[\"Products\"]\n)\n@router.post(\"/\")\ndef create_product(product: ProductCreate, db: Session = Depends(get_db)):\n    return product_service.create_product(db, product)\n@router.get(\"/\")\ndef get_products(db: Session = Depends(get_db)):\n    return product_service.get_products(db)",
+        "detail": "backend.app.routers.product",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerBase",
+        "kind": 6,
+        "importPath": "backend.app.schemas.customer",
+        "description": "backend.app.schemas.customer",
+        "peekOfCode": "class CustomerBase(BaseModel):\n    full_name: str = Field(\n        ...,\n        min_length=1,\n        max_length=100\n    )\n    email: EmailStr\n    phone_number: str = Field(\n        ...,\n        min_length=5,",
+        "detail": "backend.app.schemas.customer",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerCreate",
+        "kind": 6,
+        "importPath": "backend.app.schemas.customer",
+        "description": "backend.app.schemas.customer",
+        "peekOfCode": "class CustomerCreate(CustomerBase):\n    pass\nclass CustomerResponse(CustomerBase):\n    id: int\n    created_at: datetime\n    model_config = ConfigDict(\n        from_attributes=True\n    )",
+        "detail": "backend.app.schemas.customer",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerResponse",
+        "kind": 6,
+        "importPath": "backend.app.schemas.customer",
+        "description": "backend.app.schemas.customer",
+        "peekOfCode": "class CustomerResponse(CustomerBase):\n    id: int\n    created_at: datetime\n    model_config = ConfigDict(\n        from_attributes=True\n    )",
+        "detail": "backend.app.schemas.customer",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItemCreate",
+        "kind": 6,
+        "importPath": "backend.app.schemas.order",
+        "description": "backend.app.schemas.order",
+        "peekOfCode": "class OrderItemCreate(BaseModel):\n    product_id: int\n    quantity: int\nclass OrderCreate(BaseModel):\n    customer_id: int\n    items: List[OrderItemCreate]\nclass OrderItemResponse(BaseModel):\n    product_id: int\n    quantity: int\n    price_at_purchase: float",
+        "detail": "backend.app.schemas.order",
+        "documentation": {}
+    },
+    {
+        "label": "OrderCreate",
+        "kind": 6,
+        "importPath": "backend.app.schemas.order",
+        "description": "backend.app.schemas.order",
+        "peekOfCode": "class OrderCreate(BaseModel):\n    customer_id: int\n    items: List[OrderItemCreate]\nclass OrderItemResponse(BaseModel):\n    product_id: int\n    quantity: int\n    price_at_purchase: float\nclass OrderResponse(BaseModel):\n    id: int\n    customer_id: int",
+        "detail": "backend.app.schemas.order",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItemResponse",
+        "kind": 6,
+        "importPath": "backend.app.schemas.order",
+        "description": "backend.app.schemas.order",
+        "peekOfCode": "class OrderItemResponse(BaseModel):\n    product_id: int\n    quantity: int\n    price_at_purchase: float\nclass OrderResponse(BaseModel):\n    id: int\n    customer_id: int\n    total_amount: float\n    created_at: datetime\n    items: List[OrderItemResponse]",
+        "detail": "backend.app.schemas.order",
+        "documentation": {}
+    },
+    {
+        "label": "OrderResponse",
+        "kind": 6,
+        "importPath": "backend.app.schemas.order",
+        "description": "backend.app.schemas.order",
+        "peekOfCode": "class OrderResponse(BaseModel):\n    id: int\n    customer_id: int\n    total_amount: float\n    created_at: datetime\n    items: List[OrderItemResponse]\n    class Config:\n        from_attributes = True",
+        "detail": "backend.app.schemas.order",
+        "documentation": {}
+    },
+    {
+        "label": "ProductBase",
+        "kind": 6,
+        "importPath": "backend.app.schemas.product",
+        "description": "backend.app.schemas.product",
+        "peekOfCode": "class ProductBase(BaseModel):\n    name: str = Field(..., min_length=1, max_length=255)\n    sku: str = Field(..., min_length=1, max_length=100)\n    price: Decimal = Field(..., gt=0)\n    quantity: int = Field(..., ge=0)\nclass ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(BaseModel):\n    name: str | None = Field(None, min_length=1, max_length=255)\n    sku: str | None = Field(None, min_length=1, max_length=100)",
+        "detail": "backend.app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductCreate",
+        "kind": 6,
+        "importPath": "backend.app.schemas.product",
+        "description": "backend.app.schemas.product",
+        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(BaseModel):\n    name: str | None = Field(None, min_length=1, max_length=255)\n    sku: str | None = Field(None, min_length=1, max_length=100)\n    price: Decimal | None = Field(None, gt=0)\n    quantity: int | None = Field(None, ge=0)\nclass ProductResponse(ProductBase):\n    id: int\n    created_at: datetime",
+        "detail": "backend.app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductUpdate",
+        "kind": 6,
+        "importPath": "backend.app.schemas.product",
+        "description": "backend.app.schemas.product",
+        "peekOfCode": "class ProductUpdate(BaseModel):\n    name: str | None = Field(None, min_length=1, max_length=255)\n    sku: str | None = Field(None, min_length=1, max_length=100)\n    price: Decimal | None = Field(None, gt=0)\n    quantity: int | None = Field(None, ge=0)\nclass ProductResponse(ProductBase):\n    id: int\n    created_at: datetime\n    model_config = ConfigDict(from_attributes=True)",
+        "detail": "backend.app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "ProductResponse",
+        "kind": 6,
+        "importPath": "backend.app.schemas.product",
+        "description": "backend.app.schemas.product",
+        "peekOfCode": "class ProductResponse(ProductBase):\n    id: int\n    created_at: datetime\n    model_config = ConfigDict(from_attributes=True)",
+        "detail": "backend.app.schemas.product",
+        "documentation": {}
+    },
+    {
+        "label": "create_customer",
+        "kind": 2,
+        "importPath": "backend.app.services.customer_service",
+        "description": "backend.app.services.customer_service",
+        "peekOfCode": "def create_customer(db: Session, customer: CustomerCreate):\n    existing_customer = (\n        db.query(Customer)\n        .filter(Customer.email == customer.email)\n        .first()\n    )\n    if existing_customer:\n        return error_response(\"Customer email already exists\")\n    new_customer = Customer(\n        full_name=customer.full_name,",
+        "detail": "backend.app.services.customer_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_customers",
+        "kind": 2,
+        "importPath": "backend.app.services.customer_service",
+        "description": "backend.app.services.customer_service",
+        "peekOfCode": "def get_customers(db: Session):\n    customers = db.query(Customer).order_by(Customer.id.desc()).all()\n    return success_response(\n        \"Customers fetched successfully\",\n        customers\n    )\n# GET ONE CUSTOMER\ndef get_customer(db: Session, id: int):\n    customer = db.get(Customer, id)\n    if not customer:",
+        "detail": "backend.app.services.customer_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_customer",
+        "kind": 2,
+        "importPath": "backend.app.services.customer_service",
+        "description": "backend.app.services.customer_service",
+        "peekOfCode": "def get_customer(db: Session, id: int):\n    customer = db.get(Customer, id)\n    if not customer:\n        return error_response(\"Customer not found\")\n    return success_response(\n        \"Customer fetched successfully\",\n        customer\n    )\n# DELETE CUSTOMER\ndef delete_customer(db: Session, id: int):",
+        "detail": "backend.app.services.customer_service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_customer",
+        "kind": 2,
+        "importPath": "backend.app.services.customer_service",
+        "description": "backend.app.services.customer_service",
+        "peekOfCode": "def delete_customer(db: Session, id: int):\n    customer = db.get(Customer, id)\n    if not customer:\n        return error_response(\"Customer not found\")\n    db.delete(customer)\n    db.commit()\n    return success_response(\n        \"Customer deleted successfully\",\n        None\n    )",
+        "detail": "backend.app.services.customer_service",
+        "documentation": {}
+    },
+    {
+        "label": "create_order",
+        "kind": 2,
+        "importPath": "backend.app.services.order_service",
+        "description": "backend.app.services.order_service",
+        "peekOfCode": "def create_order(db: Session, order_data: OrderCreate):\n    try:\n        # Validate customer\n        customer = db.get(Customer, order_data.customer_id)\n        if not customer:\n            return error_response(\"Customer not found\")\n        order_items = []\n        total_amount = 0\n        # STEP 1: Validate stock first\n        for item in order_data.items:",
+        "detail": "backend.app.services.order_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_orders",
+        "kind": 2,
+        "importPath": "backend.app.services.order_service",
+        "description": "backend.app.services.order_service",
+        "peekOfCode": "def get_orders(db: Session):\n    orders = (\n        db.query(Order)\n        .options(\n            joinedload(Order.customer),\n            joinedload(Order.items).joinedload(OrderItem.product)\n        )\n        .order_by(Order.id.desc())\n        .all()\n    )",
+        "detail": "backend.app.services.order_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_order",
+        "kind": 2,
+        "importPath": "backend.app.services.order_service",
+        "description": "backend.app.services.order_service",
+        "peekOfCode": "def get_order(db: Session, id: int):\n    order = db.get(Order, id)\n    if not order:\n        return error_response(\"Order not found\")\n    return success_response(\n        \"Order fetched successfully\",\n        order\n    )\ndef delete_order(db: Session, id: int):\n    try:",
+        "detail": "backend.app.services.order_service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_order",
+        "kind": 2,
+        "importPath": "backend.app.services.order_service",
+        "description": "backend.app.services.order_service",
+        "peekOfCode": "def delete_order(db: Session, id: int):\n    try:\n        # ================= FETCH ORDER =================\n        order = db.get(Order, id)\n        if not order:\n            raise HTTPException(\n                status_code=status.HTTP_404_NOT_FOUND,\n                detail=\"Order not found\"\n            )\n        # ================= RESTORE STOCK =================",
+        "detail": "backend.app.services.order_service",
+        "documentation": {}
+    },
+    {
+        "label": "create_product",
+        "kind": 2,
+        "importPath": "backend.app.services.product_service",
+        "description": "backend.app.services.product_service",
+        "peekOfCode": "def create_product(db: Session, product: ProductCreate):\n    existing_product = (\n        db.query(Product)\n        .filter(Product.sku == product.sku)\n        .first()\n    )\n    if existing_product:\n        return error_response(\"Product SKU already exists\")\n    new_product = Product(\n        name=product.name,",
+        "detail": "backend.app.services.product_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_products",
+        "kind": 2,
+        "importPath": "backend.app.services.product_service",
+        "description": "backend.app.services.product_service",
+        "peekOfCode": "def get_products(db: Session):\n    products = db.query(Product).order_by(Product.id.desc()).all()\n    return success_response(\n        \"Products fetched successfully\",\n        products\n    )\n# GET ONE\ndef get_product(db: Session, id: int):\n    product = db.get(Product, id)\n    if not product:",
+        "detail": "backend.app.services.product_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_product",
+        "kind": 2,
+        "importPath": "backend.app.services.product_service",
+        "description": "backend.app.services.product_service",
+        "peekOfCode": "def get_product(db: Session, id: int):\n    product = db.get(Product, id)\n    if not product:\n        return error_response(\"Product not found\")\n    return success_response(\n        \"Product fetched successfully\",\n        product\n    )\n# UPDATE\ndef update_product(db: Session, id: int, product_update: ProductUpdate):",
+        "detail": "backend.app.services.product_service",
+        "documentation": {}
+    },
+    {
+        "label": "update_product",
+        "kind": 2,
+        "importPath": "backend.app.services.product_service",
+        "description": "backend.app.services.product_service",
+        "peekOfCode": "def update_product(db: Session, id: int, product_update: ProductUpdate):\n    product = db.get(Product, id)\n    if not product:\n        return error_response(\"Product not found\")\n    if product_update.sku:\n        existing_product = (\n            db.query(Product)\n            .filter(\n                Product.sku == product_update.sku,\n                Product.id != id",
+        "detail": "backend.app.services.product_service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_product",
+        "kind": 2,
+        "importPath": "backend.app.services.product_service",
+        "description": "backend.app.services.product_service",
+        "peekOfCode": "def delete_product(db: Session, id: int):\n    product = db.get(Product, id)\n    if not product:\n        return error_response(\"Product not found\")\n    db.delete(product)\n    db.commit()\n    return success_response(\n        \"Product deleted successfully\",\n        None\n    )",
+        "detail": "backend.app.services.product_service",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "kind": 2,
+        "importPath": "backend.app.utils.api_response",
+        "description": "backend.app.utils.api_response",
+        "peekOfCode": "def success_response(message: str, data: Any = None):\n    return {\n        \"status\": True,\n        \"message\": message,\n        \"data\": data\n    }\ndef error_response(message: str, data: Any = None):\n    return {\n        \"status\": False,\n        \"message\": message,",
+        "detail": "backend.app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "error_response",
+        "kind": 2,
+        "importPath": "backend.app.utils.api_response",
+        "description": "backend.app.utils.api_response",
+        "peekOfCode": "def error_response(message: str, data: Any = None):\n    return {\n        \"status\": False,\n        \"message\": message,\n        \"data\": data\n    }",
+        "detail": "backend.app.utils.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "DB_HOST",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "DB_HOST = os.getenv(\"DB_HOST\")\nDB_PORT = os.getenv(\"DB_PORT\")\nDB_NAME = os.getenv(\"DB_NAME\")\nDB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "DB_PORT",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "DB_PORT = os.getenv(\"DB_PORT\")\nDB_NAME = os.getenv(\"DB_NAME\")\nDB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "DB_NAME = os.getenv(\"DB_NAME\")\nDB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "DB_USER",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "DB_USER = os.getenv(\"DB_USER\")\nDB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "DB_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "DB_PASSWORD = os.getenv(\"DB_PASSWORD\")\nDATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(\n    autocommit=False,",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "DATABASE_URL = (\n    f\"postgresql://{DB_USER}:{DB_PASSWORD}@\"\n    f\"{DB_HOST}:{DB_PORT}/{DB_NAME}\"\n)\n# Create SQLAlchemy engine\nengine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "engine = create_engine(DATABASE_URL)\n# Create database session\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\n# Base class for all models\nBase = declarative_base()\n# Dependency for database sessions",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "SessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\n# Base class for all models\nBase = declarative_base()\n# Dependency for database sessions\ndef get_db():\n    db = SessionLocal()",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "Base = declarative_base()\n# Dependency for database sessions\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "def root():\n    return {\n        \"message\": \"Inventory Management API is running\"\n    }\n@app.get(\"/health\")\ndef health_check():\n    return {\n        \"status\": \"healthy\"\n    }\n@app.get(\"/db-check\")",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "def health_check():\n    return {\n        \"status\": \"healthy\"\n    }\n@app.get(\"/db-check\")\ndef db_check():\n    with engine.connect() as connection:\n        connection.execute(text(\"SELECT 1\"))\n    return {\n        \"message\": \"Database connection successful\"",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "db_check",
+        "kind": 2,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "def db_check():\n    with engine.connect() as connection:\n        connection.execute(text(\"SELECT 1\"))\n    return {\n        \"message\": \"Database connection successful\"\n    }",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "app = FastAPI(\n    title=\"Inventory Management API\",\n    version=\"1.0.0\"\n)\n# ✅ ADD THIS HERE (IMPORTANT)\norigins = [\n    \"http://localhost:3000\",\n    \"http://localhost:5173\"\n]\napp.add_middleware(",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "origins = [\n    \"http://localhost:3000\",\n    \"http://localhost:5173\"\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    for i in range(len(value)):\n        yield i",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    for i in range(len(value)):\n        yield i\ndef _object_keys(value):\n    for key in value:\n        yield key\ndef _is_array(value):",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    }
+]
