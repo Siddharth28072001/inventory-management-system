@@ -139,21 +139,7 @@ export default function Orders() {
           </thead>
 
           <tbody>
-            {!loading && paginatedOrders.length === 0 ? (
-              <tr>
-                <td
-                  colSpan="5"
-                  style={{
-                    ...styles.td,
-                    textAlign: "center",
-                    fontWeight: "600",
-                    padding: "20px",
-                  }}
-                >
-                  No Data Found
-                </td>
-              </tr>
-            ) : (
+            {paginatedOrders.length > 0 ? (
               paginatedOrders.map((o, index) => (
                 <tr key={o.id}>
                   <td style={styles.td}>
@@ -180,6 +166,20 @@ export default function Orders() {
                   </td>
                 </tr>
               ))
+            ) : (
+              <tr>
+                <td
+                  colSpan="5"
+                  style={{
+                    ...styles.td,
+                    textAlign: "center",
+                    fontWeight: "600",
+                    padding: "20px",
+                  }}
+                >
+                  No Data Found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>
