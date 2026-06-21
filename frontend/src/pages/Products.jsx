@@ -7,6 +7,7 @@ export default function Products() {
   const [products, setProducts] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editProduct, setEditProduct] = useState(null);
+  const [loading, setLoading] = useState(null);
 
   // ================= PAGINATION STATE =================
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,6 +16,7 @@ export default function Products() {
   // ================= FETCH =================
   const fetchProducts = async () => {
     try {
+      setLoading(true);
       const res = await getProducts();
 
       if (res.status) {
@@ -22,6 +24,7 @@ export default function Products() {
       } else {
         toast.error(res.message);
       }
+      setLoading(false);
     } catch (err) {
       toast.error("Something went wrong");
     }
@@ -34,6 +37,7 @@ export default function Products() {
   // ================= DELETE =================
   const handleDelete = async (id) => {
     try {
+      setLoading(true);
       const res = await deleteProduct(id);
 
       if (res.status) {
@@ -42,6 +46,7 @@ export default function Products() {
       } else {
         toast.error(res.message);
       }
+      setLoading(false);
     } catch (err) {
       toast.error("Delete failed");
     }

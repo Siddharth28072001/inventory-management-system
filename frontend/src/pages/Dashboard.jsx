@@ -8,6 +8,7 @@ export default function Dashboard() {
     orders: 0,
     lowStock: 0,
   });
+  const [loading, setLoading] = useState(null);
 
   useEffect(() => {
     fetchStats();
@@ -15,6 +16,7 @@ export default function Dashboard() {
 
   const fetchStats = async () => {
     try {
+      setLoading(true);
       const res = await api.get("/inventory/dashboard");
 
       const data = res?.data?.data || {
@@ -30,6 +32,7 @@ export default function Dashboard() {
         orders: data.orders ?? 0,
         lowStock: data.low_stock ?? 0,
       });
+      setLoading(false);
     } catch (err) {
       console.error(err);
 

@@ -7,6 +7,7 @@ export default function Customers() {
   const [customers, setCustomers] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editCustomer, setEditCustomer] = useState(null);
+  const [loading, setLoading] = useState(null);
 
   // ================= PAGINATION STATE =================
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,6 +16,7 @@ export default function Customers() {
   // ================= FETCH =================
   const fetchCustomers = async () => {
     try {
+      setLoading(true);
       const res = await getCustomers();
 
       if (res.status) {
@@ -22,6 +24,7 @@ export default function Customers() {
       } else {
         toast.error(res.message);
       }
+      setLoading(false);
     } catch (err) {
       toast.error("Something went wrong");
     }
@@ -34,6 +37,7 @@ export default function Customers() {
   // ================= DELETE =================
   const handleDelete = async (id) => {
     try {
+      setLoading(true);
       const res = await deleteCustomer(id);
 
       if (res.status) {
@@ -42,6 +46,7 @@ export default function Customers() {
       } else {
         toast.error(res.message);
       }
+      setLoading(false);
     } catch (err) {
       toast.error("Delete failed");
     }

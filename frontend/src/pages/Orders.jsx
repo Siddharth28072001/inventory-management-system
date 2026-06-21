@@ -10,6 +10,7 @@ export default function Orders() {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
+  const [loading, setLoading] = useState(null);
 
   // ================= PAGINATION =================
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,6 +19,7 @@ export default function Orders() {
   // ================= FETCH =================
   const fetchOrders = async () => {
     try {
+      setLoading(true);
       const [orderRes, customerRes] = await Promise.all([
         getOrders(),
         api.get("/customers"),
@@ -36,6 +38,7 @@ export default function Orders() {
       } else {
         setCustomers(customerRes.data.data || customerRes.data);
       }
+      setLoading(false);
     } catch (err) {
       toast.error("Something went wrong");
     }
@@ -48,6 +51,7 @@ export default function Orders() {
   // ================= DELETE =================
   const handleDelete = async (id) => {
     try {
+      setLoading(true);
       const res = await deleteOrder(id);
 
       if (res.status) {
@@ -56,6 +60,7 @@ export default function Orders() {
       } else {
         toast.error(res.message);
       }
+      setLoading(false);
     } catch (err) {
       toast.error("Delete failed");
     }
