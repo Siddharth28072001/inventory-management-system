@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import { getProducts, deleteProduct } from "../services/productService";
 import ProductForm from "../components/ProductForm";
 import { toast } from "react-toastify";
+import Loader from "../components/Loader";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -102,6 +103,9 @@ export default function Products() {
     if (currentPage > 1) setCurrentPage((p) => p - 1);
   };
 
+  // Loader
+  if (loading) return <Loader />;
+
   return (
     <div>
       {/* HEADER */}
@@ -115,9 +119,7 @@ export default function Products() {
 
       {/* TABLE */}
       <div style={styles.tableBox}>
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
+       
           <table style={styles.table}>
             <thead>
               <tr>
@@ -177,7 +179,7 @@ export default function Products() {
               )}
             </tbody>
           </table>
-        )}
+        
 
         {/* PAGINATION */}
         <div style={styles.pagination}>

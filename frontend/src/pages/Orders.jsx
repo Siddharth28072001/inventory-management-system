@@ -3,6 +3,7 @@ import api from "../api/axios";
 import { getOrders, deleteOrder } from "../services/orderService";
 import OrderForm from "../components/OrderForm";
 import { toast } from "react-toastify";
+import Loader from "../components/Loader";
 
 export default function Orders() {
   const [orders, setOrders] = useState([]);
@@ -111,6 +112,8 @@ export default function Orders() {
   const openView = (order) => setSelectedOrder(order);
   const closeView = () => setSelectedOrder(null);
 
+  if (loading) return <Loader />;
+
   return (
     <div>
       {/* HEADER */}
@@ -124,69 +127,62 @@ export default function Orders() {
 
       {/* TABLE */}
       <div style={styles.tableBox}>
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <table style={styles.table}>
-            <thead>
+        <table style={styles.table}>
+          <thead>
+            <tr>
+              <th style={styles.th}>#</th>
+              <th style={styles.th}>Customer</th>
+              <th style={styles.th}>Total Amount</th>
+              <th style={styles.th}>Date</th>
+              <th style={styles.th}>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {!loading && paginatedOrders.length === 0 ? (
               <tr>
-                <th style={styles.th}>#</th>
-                <th style={styles.th}>Customer</th>
-                <th style={styles.th}>Total Amount</th>
-                <th style={styles.th}>Date</th>
-                <th style={styles.th}>Action</th>
+                <td
+                  colSpan="5"
+                  style={{
+                    ...styles.td,
+                    textAlign: "center",
+                    fontWeight: "600",
+                    padding: "20px",
+                  }}
+                >
+                  No Data Found
+                </td>
               </tr>
-            </thead>
+            ) : (
+              paginatedOrders.map((o, index) => (
+                <tr key={o.id}>
+                  <td style={styles.td}>
+                    {(currentPage - 1) * pageSize + index + 1}
+                  </td>
 
-            <tbody>
-              {paginatedOrders.length > 0 ? (
-                paginatedOrders.map((o, index) => (
-                  <tr key={o.id}>
-                    <td style={styles.td}>
-                      {(currentPage - 1) * pageSize + index + 1}
-                    </td>
+                  <td style={styles.td}>{getCustomerName(o.customer_id)}</td>
 
-                    <td style={styles.td}>{getCustomerName(o.customer_id)}</td>
+                  <td style={styles.td}>₹{o.total_amount}</td>
 
-                    <td style={styles.td}>₹{o.total_amount}</td>
+                  <td style={styles.td}>{formatDate(o.created_at)}</td>
 
-                    <td style={styles.td}>{formatDate(o.created_at)}</td>
+                  <td style={styles.td}>
+                    <button style={styles.viewBtn} onClick={() => openView(o)}>
+                      View
+                    </button>
 
-                    <td style={styles.td}>
-                      <button
-                        style={styles.viewBtn}
-                        onClick={() => openView(o)}
-                      >
-                        View
-                      </button>
-
-                      <button
-                        style={styles.deleteBtn}
-                        onClick={() => handleDelete(o.id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td
-                    colSpan="5"
-                    style={{
-                      ...styles.td,
-                      textAlign: "center",
-                      fontWeight: "600",
-                      padding: "20px",
-                    }}
-                  >
-                    No Data Found
+                    <button
+                      style={styles.deleteBtn}
+                      onClick={() => handleDelete(o.id)}
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
-              )}
-            </tbody>
-          </table>
-        )}
+              ))
+            )}
+          </tbody>
+        </table>
 
         {/* PAGINATION */}
         <div style={styles.pagination}>
